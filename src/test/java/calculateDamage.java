@@ -15,11 +15,11 @@ import java.util.Collection;
 import static org.junit.Assert.*;
 
 @RunWith(Parameterized.class)
-public class GivenBlackBox {
+public class calculateDamage {
     private Class<BattleScenario> classUnderTest;
 
     @SuppressWarnings("unchecked")
-    public GivenBlackBox(Object classUnderTest) {
+    public calculateDamage(Object classUnderTest) {
         this.classUnderTest = (Class<BattleScenario>) classUnderTest;
     }
 

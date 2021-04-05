@@ -51,42 +51,25 @@ public class BattleScenario {
         int round = 1;
         double damage1;
         double damage2;
-
         Attack attack1;
         Attack attack2;
-
         while (true) {
-            //Mon 1's turn:
             System.out.println("\n" + mon1.name + " launches an attack against " + mon2.name + "!");
             attack1 = mon1.attack();
-
-            //Calculate damage:
             damage1 = calculateDamage(attack1, mon1, mon2);
             System.out.println(damage1 + " damage dealt");
-
-            //Adjust mon2's health:
             mon2.stats.health = mon2.stats.health - damage1;
             System.out.println(mon2.name + " has " + mon2.stats.health + " health left");
-
-            //Battle terminating condition:
             if (mon2.stats.health <= 0.0){
                 System.out.println(mon2.name + " has fainted in round " + round);
                 return mon1;
             }
-
-            //Mon 2's turn:
             System.out.println("\n" + mon2.name  + " launches an attack against " + mon1.name + "!");
             attack2 = mon2.attack();
-
-            //Calculate damage:
             damage2 = calculateDamage(attack2, mon2, mon1);
             System.out.println(damage2 + " damage dealt");
-
-            //Adjust mon1's health:
             mon1.stats.health = mon1.stats.health - damage2;
             System.out.println(mon1.name + " has " + mon1.stats.health + " health left");
-
-            //Battle terminating condition:
             if (mon1.stats.health <= 0.0){
                 System.out.println(mon1.name + " has fainted in round " + round);
                 return mon2;
