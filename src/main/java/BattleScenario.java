@@ -97,11 +97,13 @@ public class BattleScenario {
                 (pDefender.stats.defense * pDefender.weatherBonus * pDefender.typeBonus)
       * If the initial pAttackDamage is 0, then the damage dealt is 0. If the totalDamage calculated
       * is negative, the totalDamage dealt should be 1. Any positive value is the total damage dealt.
-      * Weather bonus: see the Environment which you can assume is correct. You need to check though if the weather bonus is applied 
+      * Weather bonus: see the Environment which you can assume is correct. You need to check though 
+      * if the weather bonus is applied 
       * correctly, since maybe the method does not use the environment correctly. 
-      * or debuffed based on the weather. EG. fire monsters have a stat advantage of +25% in sunny weather
-      * while they have a stat disadvantage of -25% in the rain.
-      * If the attack chosen, matches the monsters type, the attacker will get an extra 20% on its attack.
+      * or debuffed based on the weather. EG. fire monsters have a stat advantage of +25% in 
+      * sunny weather while they have a stat disadvantage of -25% in the rain.
+      * If the attack chosen, matches the monsters type, the attacker will get an extra 20% 
+      * on its attack.
       * Type bonus: Certain monsters have an attack bonus against others:
       *     Fire against Water: Water gains 25% while Fire looses 25%
       *     Fire against Ground: Fire gains 25% while Ground looses 25%
